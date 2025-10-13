@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Formulários Interativos</title>
+    
+    <style>
+        /* Estilos básicos para feedback */
+        .invalid { border: 2px solid red !important; }
+        .valid { border: 2px solid green; }
+        .focus-blue { border: 2px solid blue; }
+        .feedback { margin-top: 5px; font-size: 0.9em; }
+        .error { color: red; }
+        .success { color: green; }
+        
+        /* Estilos do Indicador de Força da Senha (Etapa 5) */
+        #password-strength { height: 5px; margin-top: 5px; }
+        .weak { background-color: red; width: 33%; }
+        .medium { background-color: orange; width: 66%; }
+        .strong { background-color: green; width: 100%; }
+    </style>
+</head>
+<body>
+    
+    <form id="cadastroForm" novalidate>
+        <h3>1. Contador de Caracteres</h3>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" maxlength="100" required minlength="3">
+        <div id="nameMirror"></div>
+        <div id="charCount" class="feedback">0/50</div>
+        <br>
+
+        <h3>2. Select Dependente</h3>
+        <label for="state">Estado:</label>
+        <select id="state">
+            <option value="">Selecione o Estado</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+        <label for="city">Cidade:</label>
+        <select id="city" required>
+            <option value="">Selecione a Cidade</option>
+        </select>
+        <br>
+
+        <h3>3. Foco/Blur & 4/5. Validação</h3>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+        <div id="emailFeedback" class="feedback"></div>
+        <br>
+
+        <label for="password">Senha (Min. 8 caracteres, forte):</label>
+        <input type="password" id="password" required>
+        <div id="password-strength"></div>
+        <br>
+
+        <label for="course">Curso:</label>
+        <select id="course" required>
+            <option value="">Selecione um Curso</option>
+            <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+            <option value="SI">Sistemas de Informação</option>
+        </select>
+        <br>
+
+        <input type="checkbox" id="terms" required>
+        <label for="terms">Aceito os termos e condições</label>
+        <br>
+
+        <div id="error-summary" class="feedback error" style="display: none;" aria-live="polite"></div>
+        
+        <button type="submit" id="submitBtn" disabled>Enviar Cadastro</button>
+        <button type="reset" id="resetBtn">Limpar</button>
+    </form>
+    
+    <script src="app.js"></script>
+</body>
+</html>
