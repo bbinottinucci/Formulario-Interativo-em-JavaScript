@@ -2,9 +2,9 @@ Desenvolvimento de Sistemas WEB
 Exercício Prático 05 (Eventos)
 
 Integrantes:
-1. Bruno Binotti Nucci - RA: 24008647
-2. Luana Elen - RA: 25898301
-3. Kaiky Bizon - RA: 25898016
+1. Bruno Binotti Nucci
+2. Luana Elen 
+3. Kaiky Bizon 
 
 _____________________________________________________________________________________________________________________________________
 
